@@ -19,9 +19,13 @@ public class HelloWorldServlet extends HttpServlet {
         //-- However we us it to print out the response to the browser, instead of console.
         PrintWriter out = response.getWriter();
         out.println("<h1>Hello, World!</h1>");
+
+        //-- This allows us to extract a value for a parameter submitted with a request
+        //
+        String name = request.getParameter("name");
+        if (name != null) {
+            out.println(" <h3>hello " + name + " This is how we do it! </h3>");
+        }
+
     }
 }
-
-
-//-- THis allows us to extract a value for a parameter submitted with a request.
-
