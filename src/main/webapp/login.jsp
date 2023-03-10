@@ -1,14 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    String username = request.getParameter("inputUsername");
-    String password = request.getParameter("inputPassword");
 
-    if(username != null && password != null && username.equals("admin") && password.equals("password")){
-        response.sendRedirect("profile.jsp");
-    }
-
-%>
 
 
 <html>
@@ -24,7 +16,7 @@
 
 <%--Should See a form --%>
 <!-- Form -->
-<form class="w-50 mx-auto border shadow-lg rounded p-2 mt-5" method="post" action="login.jsp">
+<form class="w-50 mx-auto border shadow-lg rounded p-2 mt-5" method="post" action="login">
     <%--Username--%>
     <div class="mb-3">
         <label for="inputUsername" class="form-label">Username</label>
